@@ -446,64 +446,59 @@ body {
 
 .main5_admin_div {
     display: flex;
-    justify-content: center; /* Centreer de items horizontaal */
-    flex-wrap: wrap; /* Zorgt ervoor dat items op een nieuwe regel komen als er niet genoeg ruimte is */
-    gap: 1rem; /* Ruimte tussen de kaarten */
-    width: 100%; /* Volledige breedte van de omsluitende container */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1200px;
     padding: 1rem;
 }
 
 .main5_admins_div {
-    flex: 1 0 calc(33.333% - 1rem); /* Zorg dat drie kaarten naast elkaar passen, rekening houdend met de gap */
-    max-width: calc(33.333% - 1rem); /* Maximale breedte voor grote schermen */
+    flex: 0 1 calc(33.333% - 1rem); 
+    max-width: calc(33.333% - 1rem);
     min-height: 18rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
-    margin-top: 1rem;
+    margin: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centreer de content verticaal */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-    padding: 1rem; /* Padding toegevoegd rondom de content */
+    align-items: center;
+    position: relative; /* Toegevoegd om absolute positionering van afbeeldingen mogelijk te maken */
 }
 
-/* Verwijder specifieke stijlen voor .main5_admins_dev_type1 en .main5_admins_dev_type2 als ze niet gebruikt worden */
-
 .main5_admins_img {
-    width: 150px; /* Breedte van de afbeelding */
-    height: 150px; /* Hoogte van de afbeelding */
-    border-radius: 50%; /* Maakt de afbeelding rond */
-    border: 3px solid var(--background1); /* Border om de afbeelding matcht met de kaart */
-    margin-top: -75px; /* Positie de afbeelding gedeeltelijk boven de kaart */
-    background-color: var(--background1); /* Achtergrondkleur voor de afbeelding */
-    position: relative;
-    z-index: 2; /* Zorg dat de afbeelding boven de kaart uitkomt */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Schaduw rond de afbeelding */
+    width: 100%; /* Volledige breedte van de kaart */
+    height: auto; /* Behoudt aspectratio van de afbeelding */
+    border-top-left-radius: var(--roundness); /* Ronde bovenhoeken */
+    border-top-right-radius: var(--roundness); /* Ronde bovenhoeken */
+    position: absolute; /* Absolute positionering ten opzichte van de parent */
+    top: 0; /* Bovenaan de kaart */
+    left: 0; /* Linkerkant van de kaart */
+    z-index: 2; /* Boven de andere inhoud */
 }
 
 .main5_admins_description_div {
+    padding: 2rem 1rem;
+    flex-grow: 1; /* Laat de div de resterende ruimte vullen */
     display: flex;
-    justify-content: center;
-    justify-self: center;
-    max-width: 100%; /* Hiermee mag de tekst de hele breedte van de kaart gebruiken */
-    padding-top: 2rem;
-    padding-bottom: 2rem;
     flex-direction: column;
-    align-items: center; /* Centreer de tekst verticaal en horizontaal */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     border-radius: 10px;
+    margin-top: 150px; /* Afstand van bovenkant gelijk aan hoogte van de afbeelding */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border: 1px solid #ccc;
-    margin-top: -1rem; /* Trek de beschrijvingsdiv een beetje omhoog om overlap met de afbeelding te creëren */
-    z-index: 1; /* Zorgt dat de beschrijvingsdiv onder de afbeelding blijft */
-    width: calc(100% - 2rem); /* Breedte aanpassen zodat padding correct wordt toegepast */
+    width: calc(100% - 2rem); /* Compenseert voor padding */
+    z-index: 1; /* Onder de afbeelding */
 }
 
 @media (max-width: 768px) {
     .main5_admins_div {
-        flex-basis: 100%; /* Neemt de volledige breedte in op kleinere schermen */
-        max-width: 100%; /* Maximale breedte voor kleine schermen */
-        margin: 1rem 0; /* Alleen boven en onder marge */
+        flex-basis: 100%; 
+        max-width: 100%;
+        margin: 1rem 0;
     }
 }
 
