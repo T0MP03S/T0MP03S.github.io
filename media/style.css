@@ -437,7 +437,7 @@ body {
     background-color: var(--background2);
     min-height: 10rem;
     width: 100%;
-    display: flex;
+    /*display: flex;*/
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -471,7 +471,7 @@ body {
 .main5_admins_img {
     width: calc(100% - 2rem); /* Past de breedte aan om padding te compenseren */
     margin-top: 1rem; /* Geeft ruimte aan de bovenkant */
-    border-radius: 50%; /* Maakt de afbeelding rond */
+    border-radius: 5%; /* Maakt de afbeelding rond */
     align-self: center; /* Centreert de afbeelding horizontaal */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 2;
