@@ -281,9 +281,16 @@ body {
     transform: scale(1.05)
 }
 
+.main1_ipcopier_text1 {
+    font-size: 2rem; /* Grotere tekst voor de URL */
+    font-weight: 800;
+    margin-bottom: 0; /* Verwijder de marge onder de URL tekst */
+}
+
 .main1_ipcopier_text2 {
     font-size:1.5rem;
     display: block;
+    margin-top: 0.25rem;
 }
 
 
