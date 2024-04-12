@@ -435,29 +435,36 @@ body {
 .main5 {
     background-color: var(--background2);
     min-height: 10rem;
-    width:100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 2rem; /* Extra ruimte aan de onderkant voor visuele scheiding */
 }
 
 .main5_admin_div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1rem .5rem 1rem;
+    justify-content: center; /* Centreer de items horizontaal */
+    flex-wrap: wrap; /* Zorgt ervoor dat items op een nieuwe regel komen als er niet genoeg ruimte is */
+    gap: 1rem; /* Ruimte tussen de kaarten */
+    width: 100%; /* Volledige breedte van de omsluitende container */
+    max-width: 1200px; /* Maximale breedte van de rij, kan aangepast worden */
 }
 
 .main5_admins_div {
-    display: flex;
-    max-width: 46rem;
+    flex: 1; /* Flex-items delen de beschikbare ruimte */
+    min-width: 250px; /* Minimale breedte van elke kaart, zodat deze niet te smal wordt */
+    max-width: 30%; /* Maximale breedte van elke kaart */
     min-height: 18rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
-    margin-top: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
+    margin: 1rem; /* Ruimte rondom de kaarten, indien nodig aanpassen */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Stijlconsistentie met beschrijvingsdivs */
+    border: 1px solid #ccc;
+    align-items: center; /* Center items in de flex container */
+    justify-content: center; /* Center de inhoud horizontaal en verticaal */
+    flex-direction: column; /* Stack items verticaal */
 }
 
 .main5_admins_dev_type1 {
@@ -471,10 +478,12 @@ body {
 }
 
 .main5_admins_img {
-    border-radius: var(--roundness);
-    max-width: 45%;
-    max-height: 100%;
-    align-self: center;
+    width: auto; /* Reset breedte */
+    height: 150px; /* Vaste hoogte, of percentage van de container */
+    border-radius: 50%; /* Maak de afbeelding rond */
+    margin-top: -75px; /* Halveer de hoogte om de afbeelding deels buiten de kaart te laten vallen */
+    border: 3px solid var(--background1); /* Rand om afbeelding die overeenkomt met de achtergrond van de kaart */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Lichte schaduw rond de afbeelding */
 }
 
 .main5_admins_description_div {
