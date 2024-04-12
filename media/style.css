@@ -500,7 +500,6 @@ body {
     margin-top: 1rem; /* Geeft ruimte aan de bovenkant */
     border-radius: 5%; /* Maakt de afbeelding rond */
     align-self: center; /* Centreert de afbeelding horizontaal */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 2;
 }
 
@@ -531,6 +530,11 @@ body {
     text-decoration: none;
     transition: all .5s;
     margin-bottom: 0.5rem;
+}
+
+.main5_admins_description_title:hover {
+    color: var(--accent1);
+    transform: scale(1.05);
 }
 
 /* For the media query at max-width: 2000px, adjust the calculation similarly */
