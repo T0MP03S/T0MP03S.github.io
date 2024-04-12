@@ -213,11 +213,14 @@ body {
 .main1_logo {
     display: block;
     align-self: center;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     transition: all .5s;
-    max-width: 40rem;
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding volledig responsief is binnen zijn container */
+    height: auto; /* Behoudt de verhouding van de afbeelding */
+    max-height: 300px; /* Maximale hoogte die je wilt toestaan */
 }
+
 .main1_logo:hover {
     transform: scale(1.05)
 }
