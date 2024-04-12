@@ -262,6 +262,7 @@ body {
 .main1_discord_text, .main1_ipcopier_text1 {
     font-size: 2rem;
     font-weight: 800;
+    display: block;
 }
 
 .main1_discord {
@@ -274,6 +275,7 @@ body {
 
 .main1_ipcopier_text2 {
     font-size:1.5rem;
+    display: block;
 }
 
 
