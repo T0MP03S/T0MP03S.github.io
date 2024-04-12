@@ -484,7 +484,7 @@ body {
 }
 
 .main5_admins_div {
-    flex: 0 1 calc(33.333% - 1rem); /* Zorgt ervoor dat er 3 blokken naast elkaar passen */
+    flex: 0 1 calc((100% - 2rem - (margin * 2)) / 3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,25 +515,28 @@ body {
     width: 100%; /* Neemt de volledige breedte van de kaart */
     z-index: 1;
 }
+/* For the media query at max-width: 2000px, adjust the calculation similarly */
 @media (max-width: 2000px) {
   .main5_admin_div {
-    /* Adjust margins or padding as necessary */
-    padding: 1rem 10rem; /* Example: Add horizontal padding */
+    padding: 1rem 10rem; /* Assuming you want to keep this padding */
   }
 
   .main5_admins_div {
-    flex: 0 1 calc(33.333% - 20rem); /* Adjust the width calculation as necessary */
+    /* You need to subtract the horizontal padding from the max-width of the container. */
+    /* Assuming you have 10rem padding on each side, that's 20rem total to subtract. */
+    flex: 0 1 calc((100% - 2rem - 20rem) / 3);
   }
 }
 
+/* For the media query at max-width: 1279px, you seem to want each card to take full width */
 @media (max-width: 1279px) {
   .main5_admin_div {
-    /* Adjust margins or padding as necessary */
-    padding: 1rem 0; /* Remove horizontal padding */
+    padding: 1rem 0; /* Removing horizontal padding */
   }
 
   .main5_admins_div {
-    flex: 0 1 100%; /* Make each card full width for smaller screens */
+    /* Each card will take the full width minus any margins you've set */
+    flex: 0 1 calc(100% - (margin * 2));
   }
 }
 }
