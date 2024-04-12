@@ -192,7 +192,7 @@ body {
 
 .main1 {
     padding-top: calc(var(--nice-padding) + 2rem);
-    display: flex;
+    display:flex;
     width: 100%;
     align-self: center;
     flex-direction: column;
@@ -227,7 +227,7 @@ body {
 
 .main1_description {
     text-align: center;
-    font-size: 3rem;
+    font-size:3rem;
     margin-bottom: var(--nice-padding);
     margin-left: 1rem;
     margin-right: 1rem;
@@ -235,41 +235,35 @@ body {
 
 .main1_actcent {
     font-weight: 800;
-    color: var(--accent1);
+    color:var(--accent1);
 }
 
-.main1_ipcopier_div {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.main1_button {
-    padding: 1rem 2rem;
+.main1_ipcopier {
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     font-size: 2rem;
     background-color: var(--accent2_transp);
-    border: none;
+    border: 0px;
     border-radius: var(--roundness);
     color: white;
     transition: all .5s;
-    cursor: pointer;
-    text-decoration: none; /* Verwijder onderstreping van de link */
-    display: flex;
-    align-items: center; /* Centreer de tekst verticaal */
-    justify-content: center; /* Centreer de tekst horizontaal */
+    cursor:pointer;
+    position: relative;
 }
 
-.main1_button:hover {
+.main1_ipcopier:hover {
     background-color: var(--accent2);
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
-.main1_button_text1 {
+.main1_ipcopier_text1 {
+    font-size:2rem;
     font-weight: 800;
 }
 
-.main1_button_text2 {
-    font-size: 1.5rem;
+.main1_ipcopier_text2 {
+    font-size:1.5rem;
 }
 
 .main1_popup {
@@ -278,7 +272,7 @@ body {
     transform: translate(-50%, -0%);
     text-align: center;
     background-color: rgba(0, 175, 0, 0.1);
-    border: solid rgba(0, 175, 0, 1) 1px;
+    border:solid rgba(0, 175, 0, 1) 1px;
     color: #fff;
     border-radius: var(--roundness);
     z-index: 9999;
@@ -290,13 +284,13 @@ body {
 .main1_downarrow {
     opacity: 50%;
     height: 1.5rem;
-    padding: 2rem;
+    padding:2rem;
     transition: all .5s;
 }
 
 .main1_downarrow:hover {
     opacity: 100%;
-    transform: scale(1.05);
+    transform: scale(1.05)
 }
 
 .main2 {
