@@ -239,6 +239,12 @@ body {
     color:var(--accent1);
 }
 
+.main1_ipcopier_div {
+    display: flex;
+    justify-content: center; /* Centreer de knoppen horizontaal */
+    gap: 1rem; /* Ruimte tussen de knoppen */
+}
+
 .main1_ipcopier, .main1_discord {
     padding: 1rem 2rem;
     font-size: 2rem;
