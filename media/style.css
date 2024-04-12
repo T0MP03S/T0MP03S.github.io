@@ -433,8 +433,6 @@ body {
 }
 
 
-
-
 .main5 {
     background-color: var(--background2);
     min-height: 10rem;
@@ -452,99 +450,63 @@ body {
     flex-wrap: wrap; /* Zorgt ervoor dat items op een nieuwe regel komen als er niet genoeg ruimte is */
     gap: 1rem; /* Ruimte tussen de kaarten */
     width: 100%; /* Volledige breedte van de omsluitende container */
-    max-width: 1200px; /* Maximale breedte van de rij, kan aangepast worden */
     padding: 1rem;
-    margin-bottom: 2rem; /* Extra ruimte aan de onderkant voor visuele scheiding */
 }
 
 .main5_admins_div {
-    flex: 0 1 calc(33.333% - 1rem); /* Flex-grow, Flex-shrink, Flex-basis */
-    min-width: 250px; /* Minimale breedte van elke kaart, zodat deze niet te smal wordt */
-    max-width: calc(33.333% - 1rem); /* Maximale breedte van elke kaart */
+    flex: 1 0 calc(33.333% - 1rem); /* Zorg dat drie kaarten naast elkaar passen, rekening houdend met de gap */
+    max-width: calc(33.333% - 1rem); /* Maximale breedte voor grote schermen */
     min-height: 18rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
-    margin: 1rem; /* Ruimte rondom de kaarten, indien nodig aanpassen */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Stijlconsistentie met beschrijvingsdivs */
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centreer de content verticaal */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid #ccc;
-    align-items: center; /* Center items in de flex container */
-    justify-content: center; /* Center de inhoud horizontaal en verticaal */
-    flex-direction: column; /* Stack items verticaal */
+    padding: 1rem; /* Padding toegevoegd rondom de content */
 }
 
-.main5_admins_dev_type1 {
-    flex-direction: row;
-    padding-right: 2rem;
-}
-
-.main5_admins_dev_type2 {
-    flex-direction: row-reverse;
-    padding-left: 2rem;
-}
+/* Verwijder specifieke stijlen voor .main5_admins_dev_type1 en .main5_admins_dev_type2 als ze niet gebruikt worden */
 
 .main5_admins_img {
-    width: 150px;
-    height: 150px; /* Vaste hoogte, of percentage van de container */
-    border-radius: 50%; /* Maak de afbeelding rond */
-    margin-top: -75px; /* Halveer de hoogte om de afbeelding deels buiten de kaart te laten vallen */
-    border: 3px solid var(--background1); /* Rand om afbeelding die overeenkomt met de achtergrond van de kaart */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Lichte schaduw rond de afbeelding */
+    width: 150px; /* Breedte van de afbeelding */
+    height: 150px; /* Hoogte van de afbeelding */
+    border-radius: 50%; /* Maakt de afbeelding rond */
+    border: 3px solid var(--background1); /* Border om de afbeelding matcht met de kaart */
+    margin-top: -75px; /* Positie de afbeelding gedeeltelijk boven de kaart */
+    background-color: var(--background1); /* Achtergrondkleur voor de afbeelding */
+    position: relative;
+    z-index: 2; /* Zorg dat de afbeelding boven de kaart uitkomt */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Schaduw rond de afbeelding */
 }
 
 .main5_admins_description_div {
     display: flex;
     justify-content: center;
     justify-self: center;
-    max-width: 60%;
+    max-width: 100%; /* Hiermee mag de tekst de hele breedte van de kaart gebruiken */
     padding-top: 2rem;
     padding-bottom: 2rem;
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+    align-items: center; /* Centreer de tekst verticaal en horizontaal */
     background-color: #f4f4f4;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     border: 1px solid #ccc;
+    margin-top: -1rem; /* Trek de beschrijvingsdiv een beetje omhoog om overlap met de afbeelding te creëren */
+    z-index: 1; /* Zorgt dat de beschrijvingsdiv onder de afbeelding blijft */
+    width: calc(100% - 2rem); /* Breedte aanpassen zodat padding correct wordt toegepast */
 }
 
-.main5_admins_description_rank {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
+@media (max-width: 768px) {
+    .main5_admins_div {
+        flex-basis: 100%; /* Neemt de volledige breedte in op kleinere schermen */
+        max-width: 100%; /* Maximale breedte voor kleine schermen */
+        margin: 1rem 0; /* Alleen boven en onder marge */
+    }
 }
-
-.main5_admins_description_rank_owner {
-    color: #3498db;
-}
-
-.main5_admins_description_rank_admin {
-    color: #f82f2f;
-}
-
-.main5_admins_description_title {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fff;
-    text-decoration: none;
-    transition: all .5s;
-    margin-bottom: .5rem;
-}
-
-.main5_admins_description_title:hover {
-    color: var(--accent1);
-    transform: scale(1.05)
-}
-
-.main5_admins_description {
-    margin-bottom: auto;
-    font-size: 1.2rem;
-}
-
 
 .main3 {
     background-color: var(--background1);
