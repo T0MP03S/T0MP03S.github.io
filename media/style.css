@@ -500,7 +500,7 @@ body {
 .main5_admins_img {
     width: calc(100% - 2rem); /* Past de breedte aan om padding te compenseren */
     margin-top: 1rem; /* Geeft ruimte aan de bovenkant */
-    border-radius: 50%; /* Maakt de afbeelding rond */
+    border-radius: 5%; /* Maakt de afbeelding rond */
     align-self: center; /* Centreert de afbeelding horizontaal */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     z-index: 2;
@@ -515,7 +515,7 @@ body {
     width: 100%; /* Neemt de volledige breedte van de kaart */
     z-index: 1;
 }
-@media (max-width: 1599px) {
+@media (max-width: 2000px) {
   .main5_admin_div {
     /* Adjust margins or padding as necessary */
     padding: 1rem 10rem; /* Example: Add horizontal padding */
