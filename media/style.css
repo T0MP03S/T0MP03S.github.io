@@ -515,6 +515,26 @@ body {
     width: 100%; /* Neemt de volledige breedte van de kaart */
     z-index: 1;
 }
+
+.main5_admins_description_rank_owner {
+    color: #f82f2f;
+}
+
+.main5_admins_description {
+    margin-bottom: auto;
+    font-size: 1.2rem;
+}
+
+.main5_admins_description_title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    transition: all .5s;
+    margin-bottom: 0.5rem;
+}
+
 /* For the media query at max-width: 2000px, adjust the calculation similarly */
 @media (max-width: 2000px) {
   .main5_admin_div {
