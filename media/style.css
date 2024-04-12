@@ -453,12 +453,14 @@ body {
     gap: 1rem; /* Ruimte tussen de kaarten */
     width: 100%; /* Volledige breedte van de omsluitende container */
     max-width: 1200px; /* Maximale breedte van de rij, kan aangepast worden */
+    padding: 1rem;
+    margin-bottom: 2rem; /* Extra ruimte aan de onderkant voor visuele scheiding */
 }
 
 .main5_admins_div {
-    flex: 1; /* Flex-items delen de beschikbare ruimte */
+    flex: 0 1 calc(33.333% - 1rem); /* Flex-grow, Flex-shrink, Flex-basis */
     min-width: 250px; /* Minimale breedte van elke kaart, zodat deze niet te smal wordt */
-    max-width: 30%; /* Maximale breedte van elke kaart */
+    max-width: calc(33.333% - 1rem); /* Maximale breedte van elke kaart */
     min-height: 18rem;
     background-color: var(--background1);
     border-radius: var(--roundness);
@@ -481,7 +483,7 @@ body {
 }
 
 .main5_admins_img {
-    width: auto; /* Reset breedte */
+    width: 150px;
     height: 150px; /* Vaste hoogte, of percentage van de container */
     border-radius: 50%; /* Maak de afbeelding rond */
     margin-top: -75px; /* Halveer de hoogte om de afbeelding deels buiten de kaart te laten vallen */
