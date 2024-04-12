@@ -256,6 +256,7 @@ body {
     cursor: pointer;
     text-decoration: none; /* Verwijdert de onderstreping van de link */
     display: flex;
+    flex-direction: column; /* Elementen boven elkaar plaatsen */
     align-items: center;
     justify-content: center;
 }
