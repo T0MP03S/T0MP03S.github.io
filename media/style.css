@@ -515,14 +515,25 @@ body {
     width: 100%; /* Neemt de volledige breedte van de kaart */
     z-index: 1;
 }
-@media (max-width: 768px) {
+@media (max-width: 1599px) {
   .main5_admin_div {
-    flex-direction: column;
-    align-items: center;
+    /* Adjust margins or padding as necessary */
+    padding: 1rem 10rem; /* Example: Add horizontal padding */
   }
 
   .main5_admins_div {
-    flex: 0 0 100%; /* On smaller screens, each card will take the full width */
+    flex: 0 1 calc(33.333% - 20rem); /* Adjust the width calculation as necessary */
+  }
+}
+
+@media (max-width: 1279px) {
+  .main5_admin_div {
+    /* Adjust margins or padding as necessary */
+    padding: 1rem 0; /* Remove horizontal padding */
+  }
+
+  .main5_admins_div {
+    flex: 0 1 100%; /* Make each card full width for smaller screens */
   }
 }
 }
