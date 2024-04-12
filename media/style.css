@@ -199,7 +199,9 @@ body {
     flex-direction: column;
     align-items: center;
     align-content: center;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-top: 1rem; /* Aanpassen naar wens */
+    padding-bottom: 1rem; /* Aanpassen naar wens */
     background: rgba(0, 0, 0, .5) url('https://imgur.com/cGMLytH.png');
     background-blend-mode: darken;
     background-repeat: no-repeat;
