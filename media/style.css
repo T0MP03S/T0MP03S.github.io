@@ -271,6 +271,7 @@ body {
 
 .main1_discord:hover {
     background-color: var(--accent1); /* Volledige kleur van --accent1 op hover */
+    transform: scale(1.05)
 }
 
 .main1_ipcopier_text2 {
