@@ -531,12 +531,12 @@ body {
 /* For the media query at max-width: 1279px, you seem to want each card to take full width */
 @media (max-width: 1279px) {
   .main5_admin_div {
-    padding: 1rem 0; /* Removing horizontal padding */
+    /* Adjust margins or padding as necessary */
+    padding: 1rem 0; /* Remove horizontal padding */
   }
 
   .main5_admins_div {
-    /* Each card will take the full width minus any margins you've set */
-    flex: 0 1 calc(100% - (margin * 2));
+    flex: 0 1 100%; /* Make each card full width for smaller screens */
   }
 }
 }
