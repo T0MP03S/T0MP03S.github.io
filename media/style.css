@@ -475,17 +475,23 @@ body {
 }
 .main5_admins_description_div {
     display: flex;
-    justify-content: center;
-    justify-self: center;
-    max-width: 60%;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: center;       /* Centreren van content binnen de div */
+    justify-self: center;          /* Zorgt ervoor dat het element zelf gecentreerd is binnen zijn container */
+    max-width: 60%;                /* Maximale breedte als percentage van de container */
+    padding-top: 2rem;             /* Bovenpadding */
+    padding-bottom: 2rem;          /* Onderpadding */
+    flex-direction: column;        /* Elementen binnen de div verticaal stapelen */
+    padding-left: 1rem;            /* Linkerpadding */
+    padding-right: 1rem;           /* Rechterpadding */
+    margin-left: auto;             /* Automatische linker marge voor centrering */
+    margin-right: auto;            /* Automatische rechter marge voor centrering */
+    align-items: center;           /* Nieuw toegevoegd om items horizontaal te centreren */
+    background-color: #f4f4f4;     /* Nieuw toegevoegd voor een achtergrondkleur, vervang deze waarde door je gewenste kleur */
+    border-radius: 10px;           /* Nieuw toegevoegd voor afgeronde hoeken */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Nieuw toegevoegd voor een subtiele schaduw */
+    border: 1px solid #ccc;        /* Nieuw toegevoegd voor een lichte rand */
 }
+
 .main5_admins_description_rank {
     text-align: center;
     font-size:1.5rem;
