@@ -2,6 +2,7 @@
     --nice-padding: 6rem;
     --roundness: 0.75rem;
     --accent1: #00adee;
+    --accent1_transp: #00adee55;
     --accent2: #94255b;
     --accent2_transp: #94255b55;
     --background1: #212529;
@@ -238,18 +239,19 @@ body {
     color:var(--accent1);
 }
 
-.main1_ipcopier {
-    padding: 1rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+.main1_ipcopier, .main1_discord {
+    padding: 1rem 2rem;
     font-size: 2rem;
     background-color: var(--accent2_transp);
-    border: 0px;
+    border: none;
     border-radius: var(--roundness);
     color: white;
     transition: all .5s;
-    cursor:pointer;
-    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Verwijdert de onderstreping van de link */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .main1_ipcopier:hover {
@@ -257,14 +259,23 @@ body {
     transform: scale(1.05)
 }
 
-.main1_ipcopier_text1 {
-    font-size:2rem;
+.main1_discord_text, .main1_ipcopier_text1 {
+    font-size: 2rem;
     font-weight: 800;
+}
+
+.main1_discord {
+    background-color: var(--accent1_transp); /* Transparante versie van --accent1 voor overeenkomst met .main1_ipcopier */
+}
+
+.main1_discord:hover {
+    background-color: var(--accent1); /* Volledige kleur van --accent1 op hover */
 }
 
 .main1_ipcopier_text2 {
     font-size:1.5rem;
 }
+
 
 .main1_popup {
     position: absolute;
